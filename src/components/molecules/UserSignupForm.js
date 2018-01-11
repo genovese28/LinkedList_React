@@ -37,22 +37,22 @@ class UserSignupForm extends Component {
             <form onSubmit={this.handleSubmit}>
                 <div className="input-area">
                     <label>
-                        Title:
+                        Email:
                         <input
                             type="email"
                             placeholder="email"
                             onChange={this.handleChange}
                             name="email"
-                            value={title}
+                            value={description}
                         />
                     </label>
                 </div>
                 <div className="input-area">
                     <label>
-                        Description:
+                        First Name:
                         <input
                             type="text"
-                            placeholder="first name"
+                            placeholder="First Name"
                             onChange={this.handleChange}
                             name="firstname"
                             value={description}
@@ -61,10 +61,10 @@ class UserSignupForm extends Component {
                 </div>
                 <div className="input-area">
                     <label>
-                        Description:
+                        Last Name
                         <input
                             type="text"
-                            placeholder="last name"
+                            placeholder="Last Name"
                             onChange={this.handleChange}
                             name="lastname"
                             value={description}
@@ -73,21 +73,21 @@ class UserSignupForm extends Component {
                 </div>
                 <div className="input-area">
                     <label>
-                        Description:
+                        username:
                         <input
                             type="text"
                             placeholder="username"
                             onChange={this.handleChange}
                             name="username"
-                            value={description}
+                            value={title}
                         />
                     </label>
                 </div>
                 <div className="input-area">
                     <label>
-                        Description:
+                        password:
                         <input
-                            type="password"
+                            type="text"
                             placeholder="password"
                             onChange={this.handleChange}
                             name="password"
