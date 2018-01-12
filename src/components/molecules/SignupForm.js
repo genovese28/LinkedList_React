@@ -3,10 +3,12 @@ import React, { Component } from "react";
 class UserSignupForm extends Component {
     constructor(props) {
         super(props);
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
         this.state = {
             email: "",
-            firstname: "",
-            lastname: "",
+            firstName: "",
+            lastName: "",
             username: "",
             password: ""
         };
@@ -19,16 +21,14 @@ class UserSignupForm extends Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        if (this.state.title) {
-            this.props.handleSubmit(this.state);
-            this.setState({
-                email: "",
-                firstname: "",
-                lastname: "",
-                username: "",
-                password: ""
-            });
-        }
+        this.props.userSignupRequest(this.state);
+        this.setState({
+            email: "",
+            firstName: "",
+            lastName: "",
+            username: "",
+            password: ""
+        });
     }
 
     render() {
@@ -54,7 +54,7 @@ class UserSignupForm extends Component {
                             type="text"
                             placeholder="First Name"
                             onChange={this.handleChange}
-                            name="firstname"
+                            name="firstName"
                             value={description}
                         />
                     </label>
@@ -66,7 +66,7 @@ class UserSignupForm extends Component {
                             type="text"
                             placeholder="Last Name"
                             onChange={this.handleChange}
-                            name="lastname"
+                            name="lastName"
                             value={description}
                         />
                     </label>

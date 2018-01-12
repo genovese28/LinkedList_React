@@ -2,10 +2,9 @@ import React from "react";
 import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
 import App from "./App";
-//import configureStore from "../store/configure";
+import configureStore from "../store/config";
 
-//const store = configureStore();
-const store = {};
+const store = configureStore();
 
 const Root = () => {
 	return (

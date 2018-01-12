@@ -1,22 +1,20 @@
-import { compose, createStore, applyMiddleware } from 'redux';
-import { users } from './reducers';
-import thunk from 'redux-thunk';
+import { compose, createStore, applyMiddleware } from "redux";
+import rootReducer from "./reducers";
+import thunk from "redux-thunk";
 
 function configureStore() {
+  // redux chrome dev tools extension
   const composeEnhancers =
-    typeof window === 'object' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
-      ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({
-          // Specify extension’s options like name, actionsBlacklist, actionsCreators, serialize...
-        })
+    typeof window === "object" && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
+      ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({})
       : compose;
+
   const enhancer = composeEnhancers(
     applyMiddleware(thunk)
     // other store enhancers if any
   );
-  const store = createStore(users, enhancer);
-  // dispatch
-  // getState
-  // subscribe
+
+  const store = createStore(rootReducer, enhancer);
 
   return store;
 }

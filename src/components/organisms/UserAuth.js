@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import UserSignupForm from "../molecules/UserSignupForm";
+import SignupFormContainer from "../../containers/SignupFormContainer";
 
 class UserAuth extends Component {
 	constructor(props) {
@@ -8,7 +8,7 @@ class UserAuth extends Component {
 	}
 
 	render() {
-		return <UserSignupForm />;
+		return <SignupFormContainer />;
 	}
 }
 

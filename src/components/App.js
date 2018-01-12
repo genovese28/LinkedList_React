@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import UserAuth from "./organisms/UserAuth";
+import LoginPage from "./pages/LoginPage";
 
 import "./App.css";
 
@@ -10,7 +10,7 @@ class App extends Component {
 				<header className="App-header">
 					<h1 className="App-title">Welcome to LinkedList</h1>
 				</header>
-				<UserAuth />
+				<LoginPage />
 			</div>
 		);
 	}
